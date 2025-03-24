@@ -1,0 +1,66 @@
+<script src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/5.57.0/adyen.js"
+    integrity="sha384-Csd5uuH7Wb1Dw+qPGWcJIw4N9FXI6M2DU+rVqax3HS3572BOyO1+okbR5JE4+htC"
+    crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/5.57.0/adyen.css"
+    integrity="sha384-zgFNrGzbwuX5qJLys75cOUIGru/BoEzhGMyC07I3OSdHqXuhUfoDPVG03G+61oF4" crossorigin="anonymous">
+
+<h1>Order Preview</h1>
+
+<table>
+    <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>Burger</td>
+        <td>2</td>
+        <td>$10.99</td>
+    </tr>
+    <tr>
+        <td>Fries</td>
+        <td>1</td>
+        <td>$3.99</td>
+    </tr>
+    <tr>
+        <td>Drink</td>
+        <td>1</td>
+        <td>$1.99</td>
+    </tr>
+</table>
+
+<h2>Total: $ <div style="display:inline-block;" id="price">16.97</div> </h2>
+
+
+<button onclick="makepayment()">Purchase</button>
+<div id="dropin-container"></div>
+
+<script>
+    var merchantAccount = "AdyenTechSupport_CarltonTest_TEST";
+    var ApiKey = "AQEyhmfxL43KbBBGw0m/n3Q5qf3VaY9UCJ1+XWZe9W27jmlZivq+EDNY2UVcJQl5XMq4DXEQwV1bDb7kfNy1WIxIIkxgBw==-pfbTP8CMmMl6kFgPOYVpPLjD1FmWUPjE/AHtu7gD68U=-i1is3]cWkf@Q*+>6~cU";
+    var price = +document.getElementById('price').innerHTML;
+
+    //Part 1, please write down your codes for hosted checkout
+  function makepayment(){
+        
+      // please get the payment link by making a post request to http://localhost:3001/createPaymentLink, 
+      // in the request body, pass in the above 3 variables
+      // you can use methods like fetch(), or any other method you are familiar with
+      // and then redirect to the payment links page.
+
+
+
+    }
+
+    var sessionId = "CSB3A25A3A45A8D659";
+    var sessionData = "Ab02b4c0!BQABAgBNZl/8pXV+9TrNf7VVpi73kwMjKcFMQagpPCEM88yWg54mB28WO11vCY1SMAHmNINlBP3m1nBT+sh36Xjy3j+CNcTL2o1Omr97/A+PSNgoUA9xAVBjIk27vf3pqzvJdASIH/gcscEF/wD2xm7WE+8QmPXkntZ5M3m1ikp4TAavJGPvG5xqw98evGWlDXsqyymXX5CKY+dC15JKu/Xs7nFWP5vln0SybyRQ0Tt5scxn0FtTu7J6IXokVntOMmlz1qUNxKIY+xU+lCfV8a4Rv06MhWi7bhZQ3E2K+Qk5BCYfVNz4jb/wnplbimyh26kA5Z6xWGeqzyauHPQJYJqTZpN6AAuh60NZDTbIxk7NITlU77UaIrse6H1TISO9E9jp9yoLxzgVCRa43rax9c3g7jfK36/tqJ2LSFScmuIU6rUgSfxIa+Wh8MjwQoF1JZrFBjej0d/qqDXntAY9eVV0saxkem6XlDk3UankiFdmKqqJdHB8yfIwvhusK3hkQa1xouGIE2pG1SMluwbOZHNs4qCJDnwaoCBcvIrH+IlzCpj12znKOTzvpTzf6ZKtIkI/HLp+7pVMgbaFLcbME9XvAK8sqoYMBFOHD07r2vZQFjNYiUnrWKLdpyP0UmjY0J+xC/WZzar20Cs1L8R0EKZpReWQPatlEQ+Hx0A4hVWWVQprWgz/9D1/tpxbI4Uxee0ASnsia2V5IjoiQUYwQUFBMTAzQ0E1MzdFQUVEODdDMjRERDUzOTA5QjgwQTc4QTkyM0UzODIzRDY4REFDQzk0QjlGRjgzMDVEQyJ9T8U5cv5I9jWvtLBWGll7KHZdOBQpJWBT8RMYxjKTFr5TtxW+tw1qg+TZKT0PZsOGU84hJ544QWHDlCXmZXsP/NsF/UPOLSYdUFFrU+Nqq/n/nrSzoEoKVbvE9Q0FevFSpaO4VMVrY30nT63EFEmHPe+KgKVO09uNEv1ZUxzt8ZXnBNNiFMyYCZJ0TlTNTkMl3YKcU0gtTqhn7XTIA9pJ1n3Vm76himsnfbLgZPzX8QgA25ukIzZM52wbKOGsGWXSER50GpKxC2VZ/sFI2w8RSjX+78zhEgvXTZOPhBBm22eTT0tSL6cfECeSCKlyNTlM1+0WhbvFx2+I4OArlg0cOVUlPUND34btW5gH8MK5tF6LWMkPzULL5+bNTZX60Yh2/ppyUN3t3CihONaVByLQZ8edT/qCgQJlhkJEJFd4ZwQMeOR/4HGSVj5qpDaoLFUgtJuIbNI4UBykTEb/20DJUMOx1z0ABFYOxH8AjzQcr/8p3SvwGPNspf79oPujwdXI9SbZa73tNq6dNPuHHoQ10iiDIC/C51LtbjOv44QXM/ygg68QCUEfgJiXaK47nO5xGm2h95f7uXslNUsn4JIEyax/73ymFzhP2bs/Z+g/Vpe8rGvIl31h9lgBYWYQ2ZMMYiFNph6RGdWN/0Ks";
+    var clientKey = "test_CHSGAF73YRAN3I6TDVGQSQVO4ETBP75D";
+
+    
+
+    //Part 2, please write down the codes to display dropin
+
+  
+    </script>
+   

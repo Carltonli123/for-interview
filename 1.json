@@ -1,0 +1,17 @@
+{
+    "amount": {
+        "currency": "USD",
+        "value": 16
+    },
+    "countryCode": "NL",
+    "expiresAt": "2025-02-21T08:55:35+01:00",
+    "id": "CSC3076081EC5D07201",
+    "merchantAccount": "AdyenTechSupport_CarltonTest_TEST",
+    "reference": "YOUR_PAYMENT_REFERENCE",
+    "returnUrl": "http:\/\/localhost:3001\/",
+    "storePaymentMethod": false,
+    "storePaymentMethodMode": "disabled",
+    "themeId": "62f89c0e-f35d-44ca-be12-132495b997ff",
+    "mode": "hosted",
+    "url": "https:\/\/test.adyen.link\/CSC3076081EC5D07201"
+}
